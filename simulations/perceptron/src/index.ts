@@ -1,4 +1,4 @@
-import { SimulationModule } from '@rec-labs/sdk';
+import { SimulationModule } from '@nexora/sdk';
 import {
   PerceptronConfig,
   PerceptronState,

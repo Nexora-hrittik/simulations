@@ -11,7 +11,7 @@ tags:
 
 # Execution
 
-The accumulator runs under the platform contract execution loop governed by `@rec-labs/sdk`.
+The accumulator runs under the platform contract execution loop governed by `@nexora/sdk`.
 
 ## Execution Lifecycle
 

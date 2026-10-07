@@ -1,4 +1,4 @@
-import { StepResult } from '@rec-labs/sdk';
+import { StepResult } from '@nexora/sdk';
 import {
   DataPoint,
   DatasetPreset,

@@ -1,6 +1,6 @@
-# @rec-labs/sim-perceptron
+# @nexora/sim-perceptron
 
-Standalone contributor interactive simulation module implementing Frank Rosenblatt's Perceptron Binary Classifier for REC-Labs.
+Standalone contributor interactive simulation module implementing Frank Rosenblatt's Perceptron Binary Classifier for Nexora.
 
 ## Development
 

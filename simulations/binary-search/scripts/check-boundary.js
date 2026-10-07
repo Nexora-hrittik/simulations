@@ -39,7 +39,7 @@ console.log('Verifying contributor simulation architectural boundary...');
 scanDir(srcDir);
 
 if (hasError) {
-  console.error('\nFAIL: Architectural boundary violated! Contributor code must depend strictly on @rec-labs/sdk.');
+  console.error('\nFAIL: Architectural boundary violated! Contributor code must depend strictly on @nexora/sdk.');
   process.exit(1);
 } else {
   console.log('PASS: Architectural boundary intact. Zero platform imports detected.\n');

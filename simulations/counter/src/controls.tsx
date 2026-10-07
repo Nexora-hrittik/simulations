@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimulationControlsProps, SimulationInspectorProps, Slider } from '@rec-labs/sdk';
+import { SimulationControlsProps, SimulationInspectorProps, Slider } from '@nexora/sdk';
 import { CounterConfig, CounterState, CounterStepLog } from './types';
 
 export const CounterControls: React.FC<

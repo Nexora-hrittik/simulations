@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimulationVisualizationProps } from '@rec-labs/sdk';
+import { SimulationVisualizationProps } from '@nexora/sdk';
 import { CounterConfig, CounterState, CounterStepLog } from './types';
 import { Activity, CheckCircle2 } from 'lucide-react';
 

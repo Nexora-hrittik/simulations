@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimulationVisualizationProps } from '@rec-labs/sdk';
+import { SimulationVisualizationProps } from '@nexora/sdk';
 import { BinarySearchConfig, BinarySearchState, BinarySearchStepLog } from './types';
 
 export const BinarySearchVisualization: React.FC<

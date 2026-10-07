@@ -1,4 +1,4 @@
-import { SimulationModule } from '@rec-labs/sdk';
+import { SimulationModule } from '@nexora/sdk';
 import { BinarySearchConfig, BinarySearchState, BinarySearchStepLog } from './types';
 import { createInitialState, step, subStep } from './logic';
 import { BinarySearchVisualization } from './visualization';

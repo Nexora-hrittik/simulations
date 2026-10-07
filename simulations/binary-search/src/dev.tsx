@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SimulationPreviewHarness } from '@rec-labs/sdk';
+import { SimulationPreviewHarness } from '@nexora/sdk';
 import { binarySearchSimulation } from './index';
 import './index.css';
 

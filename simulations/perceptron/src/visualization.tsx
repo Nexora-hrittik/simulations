@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { SimulationVisualizationProps } from '@rec-labs/sdk';
+import { SimulationVisualizationProps } from '@nexora/sdk';
 import { PerceptronConfig, PerceptronState, PerceptronStepLog, DataPoint } from './types';
 import {
   calculateDecisionBoundary,

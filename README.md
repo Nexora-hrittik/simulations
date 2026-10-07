@@ -1,6 +1,6 @@
-# REC Labs Simulations
+# Nexora Simulations
 
-This repository houses official and community-authored interactive simulation implementations for the **REC Labs** platform.
+This repository houses official and community-authored interactive simulation implementations for the **Nexora** platform.
 
 ---
 
@@ -13,16 +13,16 @@ simulations/
 └── perceptron/       # 2D Linear Classifier and convergence visualizer
 ```
 
-Each simulation is an independently identifiable and testable package implementing the `@rec-labs/sdk` contract.
+Each simulation is an independently identifiable and testable package implementing the `@nexora/sdk` contract.
 
 ---
 
 ## Architecture & Boundary Invariants
 
 1. **Dependency Direction**:
-   - Simulations depend strictly on `@rec-labs/sdk`.
+   - Simulations depend strictly on `@nexora/sdk`.
    - Simulations have **zero imports from the platform shell** (`src/`, `@heroui`, etc.).
-   - The platform consumes simulations via package contracts (`@rec-labs/sim-*`).
+   - The platform consumes simulations via package contracts (`@nexora/sim-*`).
 2. **Standalone Integrity**:
    - Any simulation in this repository can be extracted into its own standalone GitHub repository without redesigning the platform.
 

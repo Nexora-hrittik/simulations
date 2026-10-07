@@ -1,4 +1,4 @@
-import { StepResult } from '@rec-labs/sdk';
+import { StepResult } from '@nexora/sdk';
 import { CounterConfig, CounterState, CounterStepLog } from './types';
 
 export function createInitialState(_config: CounterConfig): CounterState {

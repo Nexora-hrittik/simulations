@@ -1,11 +1,16 @@
 {
-  "name": "@rec-labs/sim-binary-search",
+  "name": "@nexora/sim-binary-search",
   "version": "1.0.0",
-  "description": "Contributor-authored Binary Search interactive simulation module for REC-Labs",
+  "description": "Contributor-authored Binary Search interactive simulation module for Nexora",
   "type": "module",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "types": "./src/index.ts",
+  "files": [
+    "src",
+    "docs",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "types": "./src/index.ts",
@@ -21,7 +26,7 @@
     "check:boundary": "node scripts/check-boundary.js"
   },
   "dependencies": {
-    "@rec-labs/sdk": "*"
+    "@nexora/sdk": "^0.1.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

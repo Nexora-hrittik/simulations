@@ -1,4 +1,4 @@
-import { StepResult } from '@rec-labs/sdk';
+import { StepResult } from '@nexora/sdk';
 import { BinarySearchConfig, BinarySearchState, BinarySearchStepLog } from './types';
 
 export function generateSortedArray(size: number): number[] {

@@ -1,5 +1,5 @@
 {
-  "name": "@rec-labs/simulations-catalog",
+  "name": "@nexora/simulations-catalog",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
     "check:boundary": "node -e \"['binary-search','counter','perceptron'].forEach(s => { console.log('Checking ' + s); require('child_process').execSync('node scripts/check-boundary.js', { cwd: 'simulations/' + s, stdio: 'inherit' }); })\""
   },
   "devDependencies": {
-    "@rec-labs/sdk": "file:../sdk",
+    "@nexora/sdk": "^0.1.0",
     "vitest": "^5.0.3"
   }
 }

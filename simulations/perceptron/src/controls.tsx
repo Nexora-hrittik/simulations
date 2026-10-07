@@ -8,7 +8,7 @@ import {
 import { PRESET_DATASETS } from './logic';
 import { stepActivation } from './math';
 import { Check, X, Calculator, Info, CheckCircle2 } from 'lucide-react';
-import { SimulationControlsProps, SimulationInspectorProps, Slider } from '@rec-labs/sdk';
+import { SimulationControlsProps, SimulationInspectorProps, Slider } from '@nexora/sdk';
 
 export const PerceptronControls: React.FC<
   SimulationControlsProps<PerceptronState, PerceptronConfig>

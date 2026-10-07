@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimulationControlsProps } from '@rec-labs/sdk';
+import { SimulationControlsProps } from '@nexora/sdk';
 import { BinarySearchConfig, BinarySearchState } from './types';
 
 export const BinarySearchControls: React.FC<

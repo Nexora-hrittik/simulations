@@ -1,6 +1,6 @@
-# @rec-labs/sim-counter
+# @nexora/sim-counter
 
-Standalone contributor simulation module implementing Discrete State Counter for REC-Labs.
+Standalone contributor simulation module implementing Discrete State Counter for Nexora.
 
 ## Development
 

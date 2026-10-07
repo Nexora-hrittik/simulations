@@ -1,4 +1,4 @@
-import { SimulationModule } from '@rec-labs/sdk';
+import { SimulationModule } from '@nexora/sdk';
 import { CounterConfig, CounterState, CounterStepLog } from './types';
 import { createInitialState, step } from './logic';
 import { CounterVisualization } from './visualization';

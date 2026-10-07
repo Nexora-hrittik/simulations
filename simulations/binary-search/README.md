@@ -1,6 +1,6 @@
 # Contributor Simulation: Binary Search
 
-This is an example standalone simulation module demonstrating authoring against `@rec-labs/sdk`.
+This is an example standalone simulation module demonstrating authoring against `@nexora/sdk`.
 
 ## Development Commands
 
