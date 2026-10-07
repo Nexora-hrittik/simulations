@@ -1,6 +1,6 @@
 {
   "name": "@nexora/sim-perceptron",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Perceptron Binary Classifier interactive simulation module for Nexora",
   "type": "module",
   "main": "./src/index.ts",

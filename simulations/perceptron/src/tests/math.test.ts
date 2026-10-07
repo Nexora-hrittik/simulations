@@ -5,6 +5,7 @@ import {
   DATASETS,
   getWireStrokeWidth,
   getWireColor,
+  formatHyperplaneEquation,
 } from '../index';
 
 describe('PerceptronSimulation Mathematics & Edge Cases', () => {
@@ -212,6 +213,21 @@ describe('PerceptronSimulation Mathematics & Edge Cases', () => {
       const sum = w1 * pt.x1 + w2 * pt.x2 + b;
       expect(stepActivation(sum)).toBe(pt.y);
     }
+  });
+
+  it('formats hyperplane decision boundary equations with correct mathematical signs and syntax', () => {
+    // Normal terms with positive and negative weights
+    expect(formatHyperplaneEquation(0.2, -0.4, 0.1)).toBe('0.20x₁ − 0.40x₂ + 0.10 = 0');
+    expect(formatHyperplaneEquation(-1.5, 2.0, -0.5)).toBe('−1.50x₁ + 2.00x₂ − 0.50 = 0');
+
+    // Vertical line case (w2 = 0)
+    expect(formatHyperplaneEquation(1.0, 0, -0.5)).toBe('1.00x₁ − 0.50 = 0');
+
+    // Horizontal line case (w1 = 0)
+    expect(formatHyperplaneEquation(0, -1.0, 0)).toBe('−1.00x₂ = 0');
+
+    // Degenerate case (both weights zero)
+    expect(formatHyperplaneEquation(0, 0, 0)).toBe('0 = 0');
   });
 });
 

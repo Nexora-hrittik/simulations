@@ -96,3 +96,42 @@ export function getWireColor(
   }
   return weight > 0 ? '#2563eb' : '#e11d48';
 }
+
+/**
+ * Formats the linear decision boundary equation w1*x1 + w2*x2 + b = 0 into mathematically sound,
+ * human-readable notation with correct signs (e.g. "0.20x₁ − 0.40x₂ + 0.10 = 0").
+ */
+export function formatHyperplaneEquation(w1: number, w2: number, b: number): string {
+  const EPSILON = 1e-4;
+  if (Math.abs(w1) < EPSILON && Math.abs(w2) < EPSILON) {
+    return '0 = 0';
+  }
+
+  const formatNum = (val: number) => Math.abs(val).toFixed(2);
+  let result = '';
+
+  // x1 term
+  if (Math.abs(w1) >= EPSILON) {
+    result += w1 < 0 ? `−${formatNum(w1)}x₁` : `${formatNum(w1)}x₁`;
+  }
+
+  // x2 term
+  if (Math.abs(w2) >= EPSILON) {
+    if (result.length > 0) {
+      result += w2 < 0 ? ` − ${formatNum(w2)}x₂` : ` + ${formatNum(w2)}x₂`;
+    } else {
+      result += w2 < 0 ? `−${formatNum(w2)}x₂` : `${formatNum(w2)}x₂`;
+    }
+  }
+
+  // bias term
+  if (Math.abs(b) >= EPSILON) {
+    if (result.length > 0) {
+      result += b < 0 ? ` − ${formatNum(b)}` : ` + ${formatNum(b)}`;
+    } else {
+      result += b < 0 ? `−${formatNum(b)}` : `${formatNum(b)}`;
+    }
+  }
+
+  return `${result} = 0`;
+}
