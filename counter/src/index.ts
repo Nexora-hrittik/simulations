@@ -16,9 +16,15 @@ export const counterSimulation: SimulationModule<
     shortDescription:
       'Architectural validation simulation demonstrating an independent discrete accumulator running on the platform contract.',
     topicId: 'algorithms',
-    category: 'State Machines',
+    category: 'Algorithms',
+    topics: ['Discrete Systems', 'State Machines'],
+    concepts: ['State Accumulation', 'Discrete Transitions', 'Termination Invariants'],
     tags: ['state-machine', 'discrete-math', 'accumulator'],
     difficulty: 'Beginner',
+    status: 'available',
+    featured: false,
+    estimatedTime: '2 min',
+    prerequisites: ['Basic Arithmetic'],
     version: '1.0.0',
     sdkVersion: '0.1.0',
     author: {

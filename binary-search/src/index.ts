@@ -16,9 +16,15 @@ export const binarySearchSimulation: SimulationModule<
     shortDescription:
       'Interactive divide-and-conquer search visualizer demonstrating interval halving, midpoint calculation, and O(log n) convergence on sorted arrays.',
     topicId: 'algorithms',
-    category: 'Search & Divide-and-Conquer',
+    category: 'Algorithms',
+    topics: ['Searching', 'Divide-and-Conquer'],
+    concepts: ['Interval Halving', 'Logarithmic Complexity', 'Divide and Conquer', 'Two Pointers'],
     tags: ['algorithms', 'search', 'divide-and-conquer', 'binary-search'],
     difficulty: 'Beginner',
+    status: 'available',
+    featured: true,
+    estimatedTime: '5 min',
+    prerequisites: ['Sorted Arrays', 'Index Arithmetic'],
     version: '1.0.0',
     sdkVersion: '0.1.0',
     author: {

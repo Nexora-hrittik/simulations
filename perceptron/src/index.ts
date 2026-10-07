@@ -20,9 +20,15 @@ export const perceptronSimulation: SimulationModule<
     shortDescription:
       'Interactive 2D decision boundary visualization demonstrating Frank Rosenblatt’s foundational linear neuron model and convergence theorem.',
     topicId: 'machine-learning',
-    category: 'Neural Foundations',
+    category: 'Machine Learning',
+    topics: ['Supervised Learning', 'Neural Foundations'],
+    concepts: ['Decision Boundary', 'Linear Separability', 'Hyperplanes', 'Weight Update'],
     tags: ['neural-networks', 'classification', 'machine-learning', 'optimization'],
     difficulty: 'Beginner',
+    status: 'available',
+    featured: true,
+    estimatedTime: '5-10 min',
+    prerequisites: ['2D Cartesian Coordinates', 'Linear Equations'],
     version: '1.0.0',
     sdkVersion: '0.1.0',
     author: {
