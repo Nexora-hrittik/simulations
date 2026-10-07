@@ -1,0 +1,18 @@
+{
+  "name": "@rec-labs/simulations-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "simulations/*"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "npm --workspaces run typecheck",
+    "check:boundary": "node -e \"['binary-search','counter','perceptron'].forEach(s => { console.log('Checking ' + s); require('child_process').execSync('node scripts/check-boundary.js', { cwd: 'simulations/' + s, stdio: 'inherit' }); })\""
+  },
+  "devDependencies": {
+    "@rec-labs/sdk": "file:../sdk",
+    "vitest": "^5.0.3"
+  }
+}
