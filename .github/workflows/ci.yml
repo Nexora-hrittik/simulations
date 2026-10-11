@@ -24,6 +24,9 @@ jobs:
       - name: Verify architectural boundaries
         run: npm run check:boundary
 
+      - name: Validate catalog freshness and package metadata
+        run: npm run catalog:check
+
       - name: Type check all workspaces
         run: npm run typecheck
 

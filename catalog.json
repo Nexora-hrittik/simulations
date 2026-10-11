@@ -1,0 +1,207 @@
+{
+  "version": "1.0.0",
+  "description": "REC Labs official simulation catalog (auto-generated)",
+  "taxonomy": [
+    {
+      "id": "algorithms",
+      "title": "Algorithms",
+      "description": "Observe sorting steps, pathfinding waves, dynamic programming, and complexity in action.",
+      "count": 2,
+      "simulationIds": [
+        "binary-search",
+        "counter"
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "title": "Machine Learning",
+      "description": "Explore neural foundations, linear classifiers, gradient optimization, and decision spaces.",
+      "count": 1,
+      "simulationIds": [
+        "perceptron"
+      ]
+    },
+    {
+      "id": "data-structures",
+      "title": "Data Structures",
+      "description": "Traverse, balance, and inspect hierarchical and linear structures in real-time.",
+      "count": 0,
+      "simulationIds": []
+    },
+    {
+      "id": "computer-systems",
+      "title": "Computer Systems",
+      "description": "Simulate CPU process scheduling algorithms, virtual memory paging, and cache hierarchies.",
+      "count": 0,
+      "simulationIds": []
+    },
+    {
+      "id": "networking",
+      "title": "Computer Networks",
+      "description": "Trace packet routing, TCP flow control, handshake sequences, and subnet topologies.",
+      "count": 0,
+      "simulationIds": []
+    }
+  ],
+  "simulations": [
+    {
+      "id": "binary-search",
+      "packageName": "@nexora/sim-binary-search",
+      "packagePath": "simulations/binary-search",
+      "version": "1.0.0",
+      "title": "Binary Search Algorithm",
+      "shortDescription": "Interactive divide-and-conquer search visualizer demonstrating interval halving, midpoint calculation, and O(log n) convergence on sorted arrays.",
+      "topicId": "algorithms",
+      "category": "Algorithms",
+      "difficulty": "Beginner",
+      "tags": [
+        "algorithms",
+        "binary-search",
+        "divide-and-conquer",
+        "search"
+      ],
+      "topics": [
+        "Divide-and-Conquer",
+        "Searching"
+      ],
+      "concepts": [
+        "Divide and Conquer",
+        "Interval Halving",
+        "Logarithmic Complexity",
+        "Two Pointers"
+      ],
+      "status": "available",
+      "featured": true,
+      "estimatedTime": "5 min",
+      "prerequisites": [
+        "Sorted Arrays",
+        "Index Arithmetic"
+      ],
+      "sdkVersion": "0.1.0",
+      "author": {
+        "name": "Contributor Example",
+        "github": "contributor-dev"
+      }
+    },
+    {
+      "id": "counter",
+      "packageName": "@nexora/sim-counter",
+      "packagePath": "simulations/counter",
+      "version": "1.0.0",
+      "title": "Discrete State Counter",
+      "shortDescription": "Architectural validation simulation demonstrating an independent discrete accumulator running on the platform contract.",
+      "topicId": "algorithms",
+      "category": "Algorithms",
+      "difficulty": "Beginner",
+      "tags": [
+        "accumulator",
+        "discrete-math",
+        "state-machine"
+      ],
+      "topics": [
+        "Discrete Systems",
+        "State Machines"
+      ],
+      "concepts": [
+        "Discrete Transitions",
+        "State Accumulation",
+        "Termination Invariants"
+      ],
+      "status": "available",
+      "featured": false,
+      "estimatedTime": "2 min",
+      "prerequisites": [
+        "Basic Arithmetic"
+      ],
+      "sdkVersion": "0.1.0",
+      "author": {
+        "name": "REC Labs Core Team"
+      }
+    },
+    {
+      "id": "perceptron",
+      "packageName": "@nexora/sim-perceptron",
+      "packagePath": "simulations/perceptron",
+      "version": "1.0.0",
+      "title": "Perceptron Binary Classifier",
+      "shortDescription": "Interactive 2D decision boundary visualization demonstrating Frank Rosenblatt’s foundational linear neuron model and convergence theorem.",
+      "topicId": "machine-learning",
+      "category": "Machine Learning",
+      "difficulty": "Beginner",
+      "tags": [
+        "classification",
+        "machine-learning",
+        "neural-networks",
+        "optimization"
+      ],
+      "topics": [
+        "Neural Foundations",
+        "Supervised Learning"
+      ],
+      "concepts": [
+        "Decision Boundary",
+        "Hyperplanes",
+        "Linear Separability",
+        "Weight Update"
+      ],
+      "status": "available",
+      "featured": true,
+      "estimatedTime": "5-10 min",
+      "prerequisites": [
+        "2D Cartesian Coordinates",
+        "Linear Equations"
+      ],
+      "sdkVersion": "0.1.0",
+      "author": {
+        "name": "REC Labs Core Team"
+      }
+    }
+  ],
+  "stats": {
+    "totalSimulations": 3,
+    "topics": {
+      "algorithms": {
+        "id": "algorithms",
+        "title": "Algorithms",
+        "count": 2,
+        "simulationIds": [
+          "binary-search",
+          "counter"
+        ]
+      },
+      "machine-learning": {
+        "id": "machine-learning",
+        "title": "Machine Learning",
+        "count": 1,
+        "simulationIds": [
+          "perceptron"
+        ]
+      },
+      "data-structures": {
+        "id": "data-structures",
+        "title": "Data Structures",
+        "count": 0,
+        "simulationIds": []
+      },
+      "computer-systems": {
+        "id": "computer-systems",
+        "title": "Computer Systems",
+        "count": 0,
+        "simulationIds": []
+      },
+      "networking": {
+        "id": "networking",
+        "title": "Computer Networks",
+        "count": 0,
+        "simulationIds": []
+      }
+    },
+    "categories": {
+      "Algorithms": 2,
+      "Machine Learning": 1,
+      "Data Structures": 0,
+      "Computer Systems": 0,
+      "Computer Networks": 0
+    }
+  }
+}

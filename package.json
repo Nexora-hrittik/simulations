@@ -10,7 +10,9 @@
     "build": "npm --workspaces run build",
     "test": "vitest run",
     "typecheck": "npm --workspaces run typecheck",
-    "check:boundary": "node -e \"const fs = require('fs'), cp = require('child_process'); fs.readdirSync('simulations', { withFileTypes: true }).filter(d => d.isDirectory()).forEach(d => { console.log('Checking ' + d.name); cp.execSync('node scripts/check-boundary.js', { cwd: 'simulations/' + d.name, stdio: 'inherit' }); });\""
+    "check:boundary": "node -e \"const fs = require('fs'), cp = require('child_process'); fs.readdirSync('simulations', { withFileTypes: true }).filter(d => d.isDirectory()).forEach(d => { console.log('Checking ' + d.name); cp.execSync('node scripts/check-boundary.js', { cwd: 'simulations/' + d.name, stdio: 'inherit' }); });\"",
+    "catalog:generate": "node scripts/catalog/generate.js",
+    "catalog:check": "node scripts/catalog/validate.js"
   },
   "devDependencies": {
     "@nexora/sdk": "npm:@nexora-hrittik/sdk@^0.1.0",

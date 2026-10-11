@@ -299,12 +299,19 @@ All accepted simulations must satisfy the following technical and educational st
    - `step(state, config)` must be a pure function returning `{ nextState, isComplete, stepLog }`. It must **never mutate state in-place** or perform side effects (no network calls, timers, or direct DOM manipulation).
 2. **SDK Contract Conformance**:
    - The simulation module exported at `src/index.ts` must implement `SimulationModule<TState, TConfig, TStepLog>` from the SDK.
-3. **Required Metadata**:
+3. **Required Metadata & Canonical Topic Taxonomy**:
    - `id`: Unique kebab-case identifier matching the directory name (e.g., `'binary-search'`).
    - `title`: Human-readable title.
    - `shortDescription`: 1-2 sentence description for catalog cards.
-   - `topicId` and `category`: Primary domain category (e.g., `algorithms`, `machine-learning`, `systems`).
-   - `tags`: Array of searchable topic keywords.
+   - `topicId`: Authoritative domain topic identifier. Must be one of the 5 canonical topics:
+     - `algorithms` (Display Category: **Algorithms**)
+     - `machine-learning` (Display Category: **Machine Learning**)
+     - `data-structures` (Display Category: **Data Structures**)
+     - `computer-systems` (Display Category: **Computer Systems**)
+     - `networking` (Display Category: **Computer Networks**)
+     *(Note: Display category and category counts are derived automatically from `topicId` by the catalog generator. Contributors never edit central category registries).*
+   - `category`: *(Optional/Derived)* Display title. If declared, it must match the canonical title for the `topicId`.
+   - `tags`: Non-empty array of searchable keywords (e.g., `['search', 'divide-and-conquer']`).
    - `difficulty`: `'Beginner'`, `'Intermediate'`, or `'Advanced'`.
    - `version`: Semantic version string (e.g., `'1.0.0'`).
    - `sdkVersion`: Compatible SDK version (e.g., `'0.1.0'`).
@@ -334,7 +341,7 @@ All accepted simulations must satisfy the following technical and educational st
 Run from the root of the `simulations` repository:
 
 ```bash
-# Run all unit tests across all simulation packages
+# Run all unit tests across all simulation packages and catalog specs
 npm test
 
 # Verify architectural boundaries across all simulations
@@ -342,6 +349,12 @@ npm run check:boundary
 
 # Run TypeScript typechecks across all simulation packages
 npm run typecheck
+
+# Validate package metadata and verify catalog.json freshness (runs in CI)
+npm run catalog:check
+
+# Regenerate catalog.json from discovered simulation packages
+npm run catalog:generate
 ```
 
 ### Workspace-Specific Verification Commands
