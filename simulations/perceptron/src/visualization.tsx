@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { SimulationVisualizationProps } from '@nexora/sdk';
+import { SimulationVisualizationProps } from '@nexora-hrittik/sdk';
 import { PerceptronConfig, PerceptronState, PerceptronStepLog, DataPoint } from './types';
 import {
   calculateDecisionBoundary,

@@ -1,4 +1,5 @@
-import { SimulationModule } from '@nexora/sdk';
+import './index.css';
+import { SimulationModule } from '@nexora-hrittik/sdk';
 import {
   PerceptronConfig,
   PerceptronState,

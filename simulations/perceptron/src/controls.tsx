@@ -16,7 +16,7 @@ import {
   Database,
   Layers,
 } from 'lucide-react';
-import { SimulationControlsProps, SimulationInspectorProps, Slider } from '@nexora/sdk';
+import { SimulationControlsProps, SimulationInspectorProps, Slider } from '@nexora-hrittik/sdk';
 
 export const PerceptronControls: React.FC<
   SimulationControlsProps<PerceptronState, PerceptronConfig>

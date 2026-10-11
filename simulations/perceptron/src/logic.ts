@@ -1,4 +1,4 @@
-import { StepResult } from '@nexora/sdk';
+import { StepResult } from '@nexora-hrittik/sdk';
 import {
   DataPoint,
   DatasetPreset,

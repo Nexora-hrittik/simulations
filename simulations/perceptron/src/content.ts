@@ -1,4 +1,4 @@
-import { SimulationContent } from '@nexora/sdk';
+import { SimulationContent } from '@nexora-hrittik/sdk';
 
 export const PERCEPTRON_CONTENT: SimulationContent = {
   introduction:
