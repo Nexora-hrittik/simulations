@@ -14,8 +14,10 @@
     "catalog:check": "node scripts/catalog/validate.js"
   },
   "devDependencies": {
-    "@nexora/sdk": "npm:@nexora-hrittik/sdk@^0.1.0",
     "@nexora-hrittik/sdk": "^0.1.0",
+    "@nexora/sdk": "npm:@nexora-hrittik/sdk@^0.1.0",
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3",
+    "@typescript/typescript-win32-x64": "^7.0.2",
     "vitest": "^5.0.3"
   }
 }

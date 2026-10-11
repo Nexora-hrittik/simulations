@@ -1,6 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import Module from 'node:module';
 import { createJiti } from 'jiti';
+
+if (Module._extensions && !Module._extensions['.css']) {
+  Module._extensions['.css'] = () => {};
+}
 import {
   CANONICAL_TOPICS,
   CANONICAL_TOPIC_IDS,
@@ -115,7 +120,8 @@ export async function discoverSimulations(rootDir = process.cwd()) {
     if (!meta.id || typeof meta.id !== 'string') {
       errors.push(`[${dirName}] Simulation metadata.id must be a non-empty string.`);
     } else {
-      if (meta.id !== dirName) {
+      const expectedDirNames = [meta.id, `sim-${meta.id}`];
+      if (!expectedDirNames.includes(dirName)) {
         errors.push(
           `[${dirName}] Simulation metadata.id "${meta.id}" does not match package directory name "${dirName}".`
         );

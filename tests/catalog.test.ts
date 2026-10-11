@@ -238,18 +238,16 @@ export default sim;
     expect(result.errors).toHaveLength(0);
 
     const ids = result.simulations.map((s) => s.id);
-    expect(ids).toContain('binary-search');
-    expect(ids).toContain('counter');
+    expect(ids).toContain('insertion-sort');
     expect(ids).toContain('perceptron');
   });
 
-  // Case 12: Legacy package namespaces remain supported
-  it('12. supports legacy package namespaces (@nexora/sim-*) alongside scoped packages', async () => {
+  // Case 12: Package namespaces across catalog
+  it('12. supports scoped package namespaces (@nexora-hrittik/sim-*) across catalog', async () => {
     const result = await discoverSimulations(rootDir);
-    const legacyNames = result.simulations.map((s) => s.packageName);
-    expect(legacyNames).toContain('@nexora/sim-binary-search');
-    expect(legacyNames).toContain('@nexora/sim-counter');
-    expect(legacyNames).toContain('@nexora/sim-perceptron');
+    const packageNames = result.simulations.map((s) => s.packageName);
+    expect(packageNames).toContain('@nexora-hrittik/sim-insertion-sort');
+    expect(packageNames).toContain('@nexora-hrittik/sim-perceptron');
   });
 
   // Case 13: A second simulation can be added without manually editing a central category registry

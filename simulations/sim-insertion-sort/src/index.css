@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@source "../node_modules/@nexora-hrittik/sdk/dist";
+
+@theme {
+  --font-display: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* REC Labs Restrained Editorial Accent System */
+  --color-accent-primary: #18181b;
+  --color-accent-hover: #27272a;
+  --color-accent-active: #09090b;
+  --color-accent-muted: #71717a;
+  --color-accent-subtle: #f4f4f5;
+  --color-accent-border: #e4e4e7;
+  --color-accent-focus: #18181b;
+
+  /* Neural Green Scientific Signal Tokens */
+  --color-neural-primary: #00D6B2;
+  --color-neural-hover: #00b899;
+  --color-neural-subtle: rgba(0, 214, 178, 0.12);
+  --color-neural-glow: rgba(0, 214, 178, 0.45);
+
+  /* Shared Global Layout Gutter Token */
+  --spacing-page-gutter: var(--page-gutter);
+}
+
+:root {
+  --font-display: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --color-accent-primary: #18181b;
+  --color-accent-hover: #27272a;
+  --color-accent-active: #09090b;
+  --color-accent-muted: #71717a;
+  --color-accent-subtle: #f4f4f5;
+  --color-accent-border: #e4e4e7;
+  --color-accent-focus: #18181b;
+
+  --color-neural-primary: #00D6B2;
+  --color-neural-hover: #00b899;
+  --color-neural-subtle: rgba(0, 214, 178, 0.12);
+  --color-neural-glow: rgba(0, 214, 178, 0.45);
+
+  /* REC Labs Global Layout Gutter System in relative units: 1.125rem mobile, 2rem tablet, 4.6875rem desktop */
+  --page-gutter: 1.125rem;
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --page-gutter: 2rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --page-gutter: 4.6875rem;
+  }
+}
+
+.page-gutter-px {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+    font-family: var(--font-body);
+  }
+
+  body {
+    min-height: 100vh;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: var(--font-body);
+    background-color: #faf9f6;
+    color: #09090b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Explicit typographic primitives */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+  font-style: italic;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Technical computational surface utilities */
+.technical-surface {
+  background-color: #ffffff;
+  color: #09090b;
+  border-color: #e4e4e7;
+}
+
+.technical-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.technical-hud {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Centralized REC Labs Typography Scale */
+.rec-page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #09090b;
+}
+
+.rec-section-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #09090b;
+}
+
+.rec-panel-header {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #52525b;
+}
+
+.rec-overline {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a1a1aa;
+}
+
+.rec-body {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: #3f3f46;
+}
+
+.rec-secondary-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #71717a;
+}
+
+.rec-control-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #3f3f46;
+}
+
+.rec-mono-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* REC Labs Strict Two-Column Workspace Layout */
+.simulation-workspace {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .simulation-workspace {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  }
+}
+
+.simulation-canvas {
+  min-width: 0;
+  min-height: 420px;
+}
+
+.simulation-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+
