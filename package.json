@@ -1,5 +1,5 @@
 {
-  "name": "@nexora/simulations-catalog",
+  "name": "@nexora-hrittik/simulations-catalog",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -7,12 +7,14 @@
     "simulations/*"
   ],
   "scripts": {
+    "build": "npm --workspaces run build",
     "test": "vitest run",
     "typecheck": "npm --workspaces run typecheck",
-    "check:boundary": "node -e \"['binary-search','counter','perceptron'].forEach(s => { console.log('Checking ' + s); require('child_process').execSync('node scripts/check-boundary.js', { cwd: 'simulations/' + s, stdio: 'inherit' }); })\""
+    "check:boundary": "node -e \"const fs = require('fs'), cp = require('child_process'); fs.readdirSync('simulations', { withFileTypes: true }).filter(d => d.isDirectory()).forEach(d => { console.log('Checking ' + d.name); cp.execSync('node scripts/check-boundary.js', { cwd: 'simulations/' + d.name, stdio: 'inherit' }); });\""
   },
   "devDependencies": {
-    "@nexora/sdk": "^0.1.0",
+    "@nexora/sdk": "npm:@nexora-hrittik/sdk@^0.1.0",
+    "@nexora-hrittik/sdk": "^0.1.0",
     "vitest": "^5.0.3"
   }
 }

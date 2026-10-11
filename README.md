@@ -397,7 +397,8 @@ The integration process follows three distinct stages:
 > [!IMPORTANT]
 > **Merging a pull request accepts the simulation into this catalog; it does not automatically deploy the simulation to production.**
 > 
-> *Maintainer Confirmation Required*: The precise release mechanism (e.g., whether individual simulation packages `@nexora/sim-*` are published to an npm registry or bundled into the platform via workspace ingestion) is managed by platform maintainers. Contributor code remains isolated and independent of the platform shell.
+> - **SDK Resolution Bridge**: The catalog root resolves `@nexora/sdk` as an alias to the canonical `@nexora-hrittik/sdk` (`npm:@nexora-hrittik/sdk@^0.1.0`). This ensures existing simulation packages compile, test, and build cleanly against the official SDK without modifying their internal package manifests or source code.
+> - **Local Verification vs. Public Release**: All simulations pass 100% of local unit tests, typechecks, boundary checks, and production builds under this bridge. Final publication to a public registry or platform-side registry ingestion of `@nexora/sim-*` packages is managed upstream by maintainers during scheduled releases. Contributor code remains isolated and independent of the platform shell.
 
 ---
 
